@@ -5,13 +5,17 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "elasticsearch>=9.0.2",
+    "elasticsearch==8.13.0",
     "ipykernel>=6.29.5",
     "langchain>=0.3.25",
     "langchain-community>=0.3.25",
+    "langchain-mistralai>=0.2.10",
+    "langchain-ollama>=0.3.3",
+    "minsearch>=0.0.2",
     "openai>=1.86.0",
     "pandas>=2.3.0",
     "scikit-learn>=1.7.0",
+    "tiktoken>=0.9.0",
     "tqdm>=4.67.1",
     "wget>=3.2",
 ]
