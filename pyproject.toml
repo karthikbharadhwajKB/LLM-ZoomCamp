@@ -14,6 +14,7 @@ dependencies = [
     "minsearch>=0.0.2",
     "openai>=1.86.0",
     "pandas>=2.3.0",
+    "qdrant-client[fastembed]>=1.14.3",
     "scikit-learn>=1.7.0",
     "tiktoken>=0.9.0",
     "tqdm>=4.67.1",
