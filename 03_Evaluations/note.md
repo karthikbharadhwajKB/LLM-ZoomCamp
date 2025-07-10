@@ -24,14 +24,6 @@ Query: I discovered the course. Can I still join ?
 Relevant documents: doc1 (single document with high relevance score).
 
 
-### Dataset Generation Process: 
-
-for each record in FAQ: 
-    generate 5 questions
-
-**Outcome:**
-1000 records => 5000 questions
-
 ### Approaches to Creating This Dataset:
 
 1. **Traditional Approach:**  
@@ -44,3 +36,34 @@ for each record in FAQ:
 
 3. **LLM-Based Generation (Our Approach):**  
    In this project, we will use a Large Language Model (LLM) to automatically generate queries and their corresponding relevant documents, streamlining the dataset creation.
+
+### Dataset Generation Process - LLM based Generation: 
+
+for each record in FAQ: 
+    generate 5 questions - LLM call
+
+**Outcome:**
+1000 records => 5000 questions
+
+#### Ground Truth Data
+* 5000 Questions 
+* Saved in csv format
+* columns: question, course, document ID
+
+### Evaluation Procedure
+
+We are going to evaluate the search results using our ground truth dataset. 
+
+for each question in ground_truth_dataset: 
+   execute question 
+   check if document_id is in the search results
+   compute the metrics
+
+### Evaluation Metric 
+
+1. Hit Rate (HR) or Recall at k: 
+Tells us in general if we are able to retrieve the relevant document or not, if it's among top 5 in our case. 
+
+2. Mean Reciprocal Rank (MRR): 
+Not only tells us if we are able to retrieve in general those documents, but also how good the ranking is ?
+Meaning that we want relevant documents to be at the top to have as higher rank as possible
