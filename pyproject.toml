@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "cognee>=0.2.0",
-    "dlt[duckdb]>=1.13.0",
+    "dlt[duckdb,qdrant]>=1.13.0",
     "elasticsearch==8.13.0",
     "ipykernel>=6.29.5",
     "kuzu>=0.9.0",

@@ -890,6 +890,9 @@ wheels = [
 duckdb = [
     { name = "duckdb" },
 ]
+qdrant = [
+    { name = "qdrant-client", extra = ["fastembed"] },
+]
 sqlalchemy = [
     { name = "alembic" },
     { name = "sqlalchemy" },
@@ -2246,7 +2249,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "cognee" },
-    { name = "dlt", extra = ["duckdb"] },
+    { name = "dlt", extra = ["duckdb", "qdrant"] },
     { name = "elasticsearch" },
     { name = "ipykernel" },
     { name = "kuzu" },
@@ -2267,7 +2270,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "cognee", specifier = ">=0.2.0" },
-    { name = "dlt", extras = ["duckdb"], specifier = ">=1.13.0" },
+    { name = "dlt", extras = ["duckdb", "qdrant"], specifier = ">=1.13.0" },
     { name = "elasticsearch", specifier = "==8.13.0" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "kuzu", specifier = ">=0.9.0" },
