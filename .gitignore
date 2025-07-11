@@ -199,3 +199,5 @@ qdrant_storage
 *.duckdb
 
 *.html
+
+db.qdrant
